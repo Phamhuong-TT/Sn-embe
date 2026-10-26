@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#11152f" />
+  <title>Birthday Quest ✦ Hồng Ngọc</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="moon" aria-hidden="true"></div>
+  <main class="app">
+    <section class="screen active" id="intro">
+      <div class="eyebrow">A LITTLE UNIVERSE, JUST FOR YOU</div>
+      <div class="planet" aria-hidden="true"><span>✦</span></div>
+      <p class="small-label">27 · 10 · 2026</p>
+      <h1>Happy Birthday,<br><span>Hồng Ngọc</span></h1>
+      <p class="intro-copy">Có một món quà đang bị khóa ở đâu đó trong vũ trụ này.<br>Em có muốn cùng anh tìm nó không?</p>
+      <button class="primary" id="startBtn">Bắt đầu nhiệm vụ <span>↗</span></button>
+      <p class="tiny">QUEST NO. 2710 · MADE WITH LOVE</p>
+    </section>
+
+    <section class="screen" id="quest">
+      <div class="topline"><span>✦ BIRTHDAY QUEST</span><span id="progressText">0 / 3 STARS</span></div>
+      <div class="quest-orbit" aria-hidden="true"><div class="orbit-ring"></div><div class="orbit-core">✧</div></div>
+      <h2>Thu thập 3 ngôi sao</h2>
+      <p class="muted">Mỗi ngôi sao giữ một điều anh muốn nói với em. Chạm vào từng ngôi sao nhé.</p>
+      <div class="star-grid">
+        <button class="star-card" data-star="0"><span class="star-icon">✦</span><span>Điều anh thích</span><small>STAR 01</small></button>
+        <button class="star-card" data-star="1"><span class="star-icon">✧</span><span>Kỷ niệm của mình</span><small>STAR 02</small></button>
+        <button class="star-card" data-star="2"><span class="star-icon">✦</span><span>Lời hứa nhỏ</span><small>STAR 03</small></button>
+      </div>
+      <button class="primary hidden" id="giftBtn">Mở khóa món quà <span>♡</span></button>
+      <p class="tiny">TIP: Không có ngôi sao nào được bỏ lại đâu ✨</p>
+    </section>
+
+    <section class="screen" id="gift">
+      <div class="eyebrow">MISSION COMPLETE</div>
+      <div class="gift-scene">
+        <div class="sparkle s1">✦</div><div class="sparkle s2">✧</div><div class="sparkle s3">✦</div>
+        <button id="openGift" class="gift-box" aria-label="Mở hộp quà"><span class="gift-lid"></span><span class="gift-ribbon"></span><span class="gift-bow">∞</span></button>
+      </div>
+      <h2>Em tìm thấy rồi!</h2>
+      <p class="muted">Chạm vào chiếc hộp để mở món quà cuối cùng.</p>
+      <button class="primary" id="openLetterBtn">Mở lời nhắn bí mật <span>♡</span></button>
+    </section>
+
+    <section class="screen" id="letter">
+      <div class="eyebrow">A LETTER FROM ME TO YOU</div>
+      <div class="letter-card">
+        <div class="letter-top">✦ 27 / 10 / 2026 ✦</div>
+        <h2>Gửi em,<br><span>Hồng Ngọc.</span></h2>
+        <p>Chúc mừng sinh nhật em bé mà anh thương nhất trên đời. 🥺❤️ Vậy là embe của anh lại thêm một tuổi mới rồi. Anh mong rằng tuổi mới sẽ dịu dàng với em thật nhiều, mang đến cho em thật nhiều niềm vui, thật nhiều may mắn và những điều tốt đẹp nhất. Mong em lúc nào cũng xinh đẹp, luôn vui vẻ, luôn mạnh mẽ trước những điều không như ý và lúc nào cũng có thật nhiều lý do để mỉm cười.</p>
+        <p>Anh không biết sau này mình sẽ cùng nhau đi qua bao nhiêu mùa sinh nhật nữa, nhưng anh hy vọng rằng năm nào anh cũng có thể ở bên em, ôm em vào lòng, trao em một nụ hôn và nói với em rằng: “Chúc mừng sinh nhật em yêu, cảm ơn em vì đã xuất hiện trong cuộc đời anh.” 🫶🏻</p>
+        <p>Embe của anh à, anh mong em sẽ luôn được yêu thương, được trân trọng và được sống một cuộc đời thật hạnh phúc. Những lúc em mệt mỏi, anh mong mình sẽ là người em muốn tìm đến đầu tiên. Những lúc em buồn, anh mong mình có thể ôm em thật chặt để em biết rằng em không phải một mình đối mặt với mọi thứ. Và những lúc em vui, anh mong mình luôn là người được nhìn thấy nụ cười xinh đẹp ấy.</p>
+        <p>Anh không hứa sẽ khiến mọi ngày của em đều hoàn hảo, nhưng anh sẽ cố gắng để những ngày có anh trong đó trở nên ấm áp hơn một chút. Anh muốn cùng em đi thật nhiều nơi, ăn thật nhiều món ngon, chụp thật nhiều tấm ảnh, tạo thật nhiều kỷ niệm và cùng nhau thực hiện những điều mà hai đứa mình vẫn luôn mong muốn. Sau này, khi nhìn lại, chúng mình sẽ có thật nhiều câu chuyện để kể và thật nhiều khoảnh khắc để mỉm cười.</p>
+        <p>Chúc mừng sinh nhật embe Yuuu của tớ. 🎂🌷 Mong mọi ước mơ của em đều dần trở thành hiện thực, mong nước mắt của em ít đi, nụ cười của em nhiều hơn và mong tình yêu của chúng mình sẽ ngày càng trưởng thành, bền chặt.
+Anh yêu em nhiều hơn những gì anh có thể nói thành lời. Thương em hôm nay, thương em ngày mai và mong rằng rất nhiều năm sau nữa, người được gọi em là “embe của Hướng” vẫn sẽ là anh.</p>
+        <p class="love-line">Sinh nhật vui vẻ nhé, tình yêu của anh. Anh yêu em, cô gái nhỏ của anh. ❤️🎂💋 ♡</p>
+        <div class="signature">— Hướng ✦</div>
+      </div>
+      <button class="primary" id="celebrateBtn">Thắp sáng bầu trời <span>✧</span></button>
+      <p class="tiny">END OF QUEST · BEGINNING OF ANOTHER BEAUTIFUL YEAR</p>
+    </section>
+  </main>
+
+  <div class="modal hidden" id="starModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="close" id="closeModal" aria-label="Đóng">×</button>
+      <div class="modal-star">✦</div>
+      <p class="eyebrow" id="modalEyebrow">STAR UNLOCKED</p>
+      <h2 id="modalTitle">Một điều anh thích ở em</h2>
+      <p id="modalMessage"></p>
+      <button class="primary" id="gotItBtn">Cất ngôi sao <span>✦</span></button>
+    </div>
+  </div>
+  <div class="toast hidden" id="toast">Bầu trời này dành riêng cho em ✨</div>
+  <audio id="birthdayMusic" loop>
+  <source src="Happy-birthday-piano-music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicButton">🎵 Bật nhạc sinh nhật</button>
+</body>
+</html>
